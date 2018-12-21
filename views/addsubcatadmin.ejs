@@ -1,0 +1,50 @@
+<%include head %>
+<%include adminnavigator%>
+
+    <div id="page">
+<center>
+<h2>Add Sub Category Here!!!</h2>
+
+<font color='orange'><%= r %></font>
+                             <form method="post"  action="/admin/addsubcatadmin" enctype='multipart/form-data'>
+                                <table cellspacing='5' cellpadding='10'>
+                                <tr>
+                                <td>Category</td>
+                                <td>
+<select name='catnm'>
+ <option>Select Category</option>
+ 
+ <% for(i=0;i<catdata.length;i++) { %>
+   <option><%= catdata[i].catnm %></option>
+ <% } %>
+
+</select>
+</td>
+                                </tr>
+  
+                              <tr>
+                                <td>Sub Category name</td>
+                                <td>
+<input type='text' name='subcatnm' />
+</td>
+                                </tr>
+  
+
+
+
+                              <tr>
+                                <td>Sub Category Icon</td>
+<td><input type='file' name='catimg'/></td>
+                                </tr>
+                                <tr>
+                                <td><input type="submit" name="s" value="Add Sub Category"><td>
+                                </tr>
+                                </table>
+                                </form>	
+
+
+				
+	<center>
+    
+</div>
+<%include footer%>

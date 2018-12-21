@@ -1,0 +1,82 @@
+<%include head%>   
+<%include navigator%>
+ <div id="page">
+		<div id="content">
+			<div class="box">
+				<h2>REGISTER</h2>
+
+<font color='orange'><%= result %></font>		
+                                <form method ="POST" action="/register">
+                                 <table cellspacing="10">
+                                 <tr>
+                                 <td>Name</td>
+                                 <td><input type="text" name="nm">
+                                 </tr>
+                                 <tr>
+                                 <td>email</td>
+                                 <td><input type="email" name="email">
+                                 </tr>
+                                 <tr>
+                                 <td>password</td>
+                                 <td><input type="password" name="pass">
+                                 </tr>
+                                 <tr>
+                                 <td>address</td>
+                                 <td><textarea name="address"></textarea>
+                                 </tr>
+                                 <tr>
+                                 <td>city</td>
+                                 <td>
+                                 <select name="city">
+                                 <option> ----select---- </option>
+                                 <option> ujjain </option>
+                                 <option> indore</option>
+
+                                </td>
+                                 </tr>
+                                 <tr>
+                                 <td>Contact</td>
+                                 <td><input type="text" name="mobile">
+                                 </tr>
+                                 
+                                <tr>
+                                 <td>Gender</td>
+                                 <td>male<input type="radio" name="gender" value="male">
+                                 female<input type="radio" name="gender" value="female">
+                                 </td>
+                                 </tr>
+                                 <tr>
+                                 <td>
+<input type='hidden' name='vstatus' value='0'/>
+<input type='hidden' name='role' value='user'/>
+<input type="submit"  value="register">
+                                 </tr>
+
+</table>
+                                
+
+</form>
+				
+			</div>
+			
+			<br class="clearfix" />
+		</div>
+            
+		<div id="sidebar">
+			<div class="box">
+				<h3>socail contacts</h3>
+				<ul class="list">
+					<li class="first"><a href="#">facebook</a></li>
+					<li><a href="#">twitter</a></li>
+					<li><a href="#">blogs</a></li>
+					<li><a href="#">instagram</a></li>
+					<li class="last"><a href="#">snapchat</a></li>
+				</ul>
+			</div>
+		
+		</div>
+		<br class="clearfix" />
+	</div>
+    
+</div>
+<%include footer%>

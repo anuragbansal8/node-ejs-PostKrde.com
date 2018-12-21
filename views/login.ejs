@@ -1,0 +1,55 @@
+<%include head%>
+<%include navigator%>    
+<div id="page">
+		<div id="content">
+			<div class="box">
+				<h2>Log In</h2>
+
+<font color='red'><%= result %></font>
+                                <form method="post" action="/login">
+                                <table cellspacing='5' cellpadding='10'>
+                                <tr>
+                                <td>Username</td>
+                                <td> <input type="text" name="email" value="<%= d.u %>"></td>
+                                </tr>
+                                <tr>
+                                <td>Password</td>
+                                <td><input type="password" name="pass" value="<%= d.p %>"></td>
+                                </tr>
+
+<tr>
+                                <td colspan='2'><input type="checkbox" name="chk" value='remember'
+ <% if(d.s) { %>
+ checked
+ <% } %>	
+> 
+Remember me?
+</td>
+                                </tr>
+                                <tr>
+                                <td><input type="submit" name="s" value="LogIn"><td>
+                                </tr>
+                                </table>
+                                </form>		
+                        </div>			
+			<br class="clearfix" />
+		</div>
+            
+		<div id="sidebar">
+			<div class="box">
+				<h3>social contacts</h3>
+				<ul class="list">
+					<li class="first"><a href="#">facebook</a></li>
+					<li><a href="#">twitter</a></li>
+					<li><a href="#">blogs</a></li>
+					<li><a href="#">instagram</a></li>
+					<li class="last"><a href="#">snapchat</a></li>
+				</ul>
+			</div>
+		
+		</div>
+		<br class="clearfix" />
+	</div>
+    
+</div>
+<%include footer%>

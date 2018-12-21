@@ -1,0 +1,60 @@
+<%include head%>
+<%include navigator%>
+<%include sliders%>
+    
+	<div id="page">
+		<div id="content">
+			<div class="box">
+				<h2>Welcome to Post Karde</h2>
+	
+<style>
+#mymain
+{
+ height:450px;
+ width:600px;
+}
+#mymainpart
+{
+ height:150px;
+ width:200px;
+ float:left;
+}
+</style>
+<div id='mymain'>
+<% for(i=0;i<data.length;i++) { %>
+ <a href='/viewsubcat?cnm=<%= data[i].catnm %>'>
+ <div id='mymainpart'>
+  <center>
+  <img src='uploads/<%= data[i].catimgnm %>' height='100' width='150'/>
+  <br>
+  <b><%= data[i].catnm %></b> 
+  </center>
+ </div>
+ </a>
+<% } %>
+</div>
+
+
+		</div>
+			
+			<br class="clearfix" />
+		</div>
+            
+		<div id="sidebar">
+			<div class="box">
+				<h3>socail contacts</h3>
+				<ul class="list">
+					<li class="first"><a href="#">facebook</a></li>
+					<li><a href="#">twitter</a></li>
+					<li><a href="#">blogs</a></li>
+					<li><a href="#">instagram</a></li>
+					<li class="last"><a href="#">snapchat</a></li>
+				</ul>
+			</div>
+		
+		</div>
+		<br class="clearfix" />
+	</div>
+    
+</div>
+<%include footer%>
